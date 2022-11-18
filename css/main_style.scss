@@ -1,0 +1,137 @@
+@import url("https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css");
+@import "input.scss";
+
+@mixin inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+$bg-color: #dee7d7;
+$dark-green: #5a8835;
+$text-color: #434343;
+$section-text-color: #606060;
+
+body {
+  font-family: $default-font;
+}
+.hd {
+  width: 100%;
+  background-color: #dee7d7;
+
+  .inner {
+    @include inner;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    .hd_left_wrap {
+      display: flex;
+      align-items: center;
+      .nav_bar {
+        display: flex;
+        margin-left: 50px;
+        .nav_list {
+          margin: 0 30px;
+          font-size: 15px;
+          a {
+            text-decoration: none;
+            color: black;
+            display: block;
+          }
+        }
+      }
+    }
+    .hd_right_wrap {
+      a {
+        padding-left: 15px;
+      }
+    }
+  }
+}
+.section_title {
+  color: $dark-green;
+  font-size: 23px;
+  font-weight: 800;
+}
+.section_subtitle {
+  font-size: 50px;
+  line-height: 44px;
+  margin-top: 25px;
+  font-weight: 700;
+  line-height: 71px;
+}
+.section_txt {
+  font-size: 23px;
+  line-height: 33.3px;
+  font-weight: 300;
+  color: $section-text-color;
+  margin-top: 52px;
+}
+.main {
+  background-color: $bg-color;
+  height: 727px;
+  .inner {
+    @include inner;
+    display: flex;
+    .main_left {
+      width: 50%;
+      .main_title {
+        font-size: 50px;
+        line-height: 44px;
+        margin-top: 192px;
+        font-weight: 700;
+        line-height: 71px;
+      }
+      .main_subtitle {
+        font-family: $default-font;
+        font-size: 19px;
+        line-height: 33.3px;
+        font-weight: 300;
+        color: $text-color;
+        margin-top: 64px;
+      }
+      .main_btn_wrap {
+        display: flex;
+        margin-top: 50px;
+        a {
+          width: 178.23px;
+          background-color: $dark-green;
+          border-radius: 64px;
+          text-align: center;
+          padding: 8px 0 4px 0;
+          margin-right: 20px;
+        }
+      }
+    }
+    .main_right {
+      width: 50%;
+      .main_img_wrap {
+        img {
+          width: 100%;
+          transform: translate(99px, -66px);
+        }
+      }
+    }
+  }
+}
+.community {
+  width: 100%;
+  .inner {
+    @include inner;
+    display: flex;
+    padding-top: 276px;
+    .community_left {
+      width: 50%;
+    }
+    .community_right {
+      width: 50%;
+      display: flex;
+      padding-right: 107px;
+      img {
+        width: 60%;
+        &:first-child {
+          transform: translate(70px, -46px);
+        }
+      }
+    }
+  }
+}
